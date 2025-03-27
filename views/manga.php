@@ -27,9 +27,14 @@ $dbPDO->exec("SELECT FROM manga WHERE id = $manga_id");
             <ul>
                 <?php
                 foreach ($dbPDO->query("SELECT nom FROM personnage WHERE manga_id = $manga_id") as $row) {
-                    echo "<li>{$row['nom']}</li>";
+                    echo "<tr>
+                    <td>{$row['nom']}</td>
+                    <td><a href='Views/personnage.php?id={$row['id']}'>info_perso</a></td> 
+                   </tr>";
                 }
                 ?>
+            </ul>
+        </div>
      <a href="../index.php" class="btn">Retour</a>
  </body>
  </html>
