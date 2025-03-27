@@ -21,5 +21,8 @@ require_once('C:/MAMP/htdocs/php/partiel_corentin_dubernet/partiel/model/pdo.php
                 }
                 ?>
          </table>
+         <a href='formulaire/addAuthor.php'>ajouté un auteur.</a>
+         <a href='formulaire/addCharacter.php'>ajouté un personnage.</a>
+         <a href='formulaire/addManga.php'>ajouté un manga.</a>
     </div>
     </body>
