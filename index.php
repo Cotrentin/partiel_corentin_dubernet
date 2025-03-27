@@ -10,13 +10,16 @@ require_once('C:/MAMP/htdocs/php/partiel_corentin_dubernet/partiel/model/pdo.php
  <body>
     <div class="section">
         <h1>TOP manga :</h1>
-        <ul>
-             <?php
-             foreach ($dbPDO->query("SELECT titre, année_de_publication FROM manga ORDER BY année_de_publication DESC") as $row) {
-                 echo "<li>{$row['titre']}</li>";
-                 echo "<li>{$row['année_de_publication']}</li>";
-             }
-             ?>
-         </ul>
+        <table>
+                <?php
+                foreach ($dbPDO->query("SELECT titre, année_de_publication FROM manga ORDER BY année_de_publication DESC") as $row) {
+                    echo "<tr>
+                         <td>{$row['titre']}</td>
+                         <td>{$row['année_de_publication']}</td>
+                         <td><a href='Views/manga.php?id={$row['id']}'>info</a></td>
+                        </tr>";
+                }
+                ?>
+         </table>
     </div>
     </body>
